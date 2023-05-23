@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Galano';
+    src: url(Galano\ Grotesque\ DEMO\ Bold.otf);
+}
+body{
+    background-color: rgb(247,247,250);
+    
+    margin: 0;
+    
+}
+.bloccobottoni{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+}
+.divbottoni{
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    align-items: center;
+}
+.pulsante{
+    display: flex ;
+    background-color: white;
+    border: none;
+    width: 330px;
+    height: 55px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 15px;
+    box-shadow:  0 10px 60px rgba(0, 0, 0, 0.15);
+    align-items: center;
+    transition: all 0.15s ease-out;
+    color: rgb(10, 10, 30);
+    align-items: center;
+}
+.fr{
+    display: flex;
+    flex:1;
+}
+.butbut{
+    background-color: rgb(138, 25, 25);
+}
+button{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Galano', Helvetica,Arial,sans-serif;
+}
+img{
+    height: 30px;
+
+}
+.img1{
+    position: relative;
+    right: -60%;
+}
+.img2{
+    position: relative;
+    right: -60%;
+}
+.img3{
+    position: relative;
+    right: 0%;
+}
+.pulsante:hover{
+    font-size: 23px;
+    width: 360px;
+    height: 60px;
+    box-shadow: 0 10px 60px  rgba(0, 68, 255, 0.219);
+}
+.pulsante:active{
+    font-size: 23px;
+    width: 360px;
+    height: 60px;
+    box-shadow: 0 10px 60px  rgba(0, 68, 255, 0.219);
+}
+.titolo{
+    position: relative;
+    top:-400px;
+    left: 60px;
+    font-family: 'Galano', Helvetica,Arial,sans-serif;
+    font-size: 40px;
+    color: rgb(10, 10, 30);
+
+}
+.uno{
+    animation: salita 1.5s ease-out ;
+}
+.due{
+    animation: salita 1.5s ease-out 0.3s ;
+    animation-fill-mode: backwards;
+}
+.tre{
+    animation: salita 1.5s ease-out 0.6s ;
+    animation-fill-mode: backwards;
+}
+@keyframes salita {
+    from{
+        transform: translateY(100px);
+        opacity: 0%;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+.homeimg{position: absolute;
+    bottom:20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
