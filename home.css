@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Galano';
-    src: url(Galano\ Grotesque\ DEMO\ Bold.otf);
+    src: url(GalanoGrotesqueBold.otf);
 }
 body{
     background-color: rgb(247,247,250);
@@ -41,9 +41,7 @@ body{
     flex:1;
 }
 .butbut{
-    background-color: rgb(138, 25, 25);
-}
-button{
+    
     background-color: rgb(255, 255, 255);
     border-color: white;
     border: none;
@@ -51,7 +49,9 @@ button{
     font-weight: 700;
     font-family: 'Galano', Helvetica,Arial,sans-serif;
     color: rgb(10, 10, 30);
+    cursor: pointer;
 }
+
 img{
     height: 30px;
 
