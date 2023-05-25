@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="assenze.css">
+  </head>
+  <body>
+    <div class="div1">
+      <div class="vuoto"></div>
+      <div class="titoli">
+        <h>Presenze</h>
+        <div>        </div>
+         <h>Assenze</h>
+      </div>
+      <div class="inputs">
+        <input id="inputPres" >
+        <div></div>
+        <input id="inputAss" >
+      </div>
+      <div class="bottoneinvia" id="bottInvia">
+        <h>Invia</h>
+      </div>
+      <div class="vuoto"></div>
+      
+    </div>
+        
+    <script>
+
+
+      let Assenze= localStorage.key(0);
+      let Presenze= localStorage.key(1);
+      let AssVal= localStorage.getItem(Assenze);
+      let PresVal= localStorage.getItem(Presenze);
+      
+      console.log(localStorage);
+
+
+      document.getElementById("inputPres").placeholder=PresVal;
+      document.getElementById("inputAss").placeholder=AssVal;
+
+
+      bottInvia.onclick= function(){
+         AssVal = document.getElementById("inputAss").value;
+         PresVal = document.getElementById("inputPres").value;
+
+        console.log(AssVal);
+        console.log(PresVal);
+
+        if(AssVal){
+          localStorage.setItem('Assenze', AssVal);
+        }
+
+        if(PresVal){
+          localStorage.setItem('Presenze', PresVal);
+
+        }
+        
+      console.log(localStorage);
+
+      }
+
+
+
+      </script>
+    </body>
+</html>

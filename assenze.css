@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Galano';
+    src: url(GalanoGrotesqueBold.otf);
+}
+
+body{
+    display: grid;
+    background-color: rgb(247,247,250);
+    align-items: top;
+    justify-items: center;
+    margin: 0px;
+}
+.div1{
+    display: grid;
+
+    /* spazio su, testo, inputs, bottoneinvia, fr, spazio sotto*/
+    grid-template-rows: 0px 30px 50px 40px 1fr 10px;
+
+    gap: 10px;
+    
+    justify-items: center;
+}
+.titoli{
+    display: grid;
+    grid-template-columns: 1fr 20px 1fr;
+    font-family: 'Galano';
+    font-size: 25px;
+    color: rgb(10, 10, 30);
+}
+.inputs{
+    display: grid;
+    grid-template-columns: 1fr 20px 1fr;
+}
+input{
+    font-family: 'Galano';
+    border: none;
+    border-radius: 30px;
+    font-size: 30px;
+    max-width: 100px;
+    padding-left: 15px;
+    box-shadow:  0 10px 60px rgba(0, 0, 0, 0.15);
+}
+input:active{
+    border-radius: 0px;
+}
+
+.bottoneinvia{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(45, 45, 250);
+    font-family: 'Galano';
+    border: none;
+    border-radius: 18px;
+    font-size: 20px;
+    padding: 2px;
+    box-shadow:  0 10px 60px rgba(0, 0, 0, 0.15);
+    color: white;
+    width: 210px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.bottoneinvia:hover{
+    background-color: rgb(45, 45, 200);
+}
+
+.bottoneinvia:active{
+    background-color: rgb(45, 45, 150);
+
+}
+
