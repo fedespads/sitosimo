@@ -21,10 +21,15 @@ body{
     font-family: 'Galano';
     font-size: 25px;
     color: rgb(10, 10, 50);
+    animation: salita 1.5s ease-out ;
+    animation-fill-mode: backwards;
 }
 .inputs{
     display: grid;
     grid-template-columns: 1fr 20px 1fr;
+    
+    animation: salita 1.5s ease-out 0.1s ;
+    animation-fill-mode: backwards;
 }
 input{
     font-family: 'Galano';
@@ -54,6 +59,9 @@ input:active{
     width: 210px;
     cursor: pointer;
     transition: 0.2s;
+    
+    animation: salita 1.5s ease-out 0.2s ;
+    animation-fill-mode: backwards;
 }
 
 .bottoneinvia:hover{
@@ -74,6 +82,9 @@ input:active{
     box-shadow:  0 10px 60px rgba(0, 0, 0, 0.15);
     font-family: 'Galano';
     grid-template-rows: 30px 1px 30px;
+    
+    animation: salita 1.5s ease-out 0.3s ;
+    animation-fill-mode: backwards;
 }
 .tabella2{
     
@@ -84,6 +95,9 @@ input:active{
     box-shadow:  0 10px 60px rgba(0, 0, 0, 0.15);
     font-family: 'Galano';
     grid-template-rows: 30px 1px 30px 1px 30px 1px 30px;
+    
+    animation: salita 1.5s ease-out 0.6s ;
+    animation-fill-mode: backwards;
 }
 
 
@@ -96,6 +110,9 @@ input:active{
     box-shadow:  0 10px 60px rgba(0, 0, 0, 0.15);
     font-family: 'Galano';
     grid-template-rows: 30px 1px 30px 1px 30px 1px 30px;
+    
+    animation: salita 1.5s ease-out 0.6s ;
+    animation-fill-mode: backwards;
 }
 
 .linea{
@@ -179,4 +196,16 @@ img{
 }
 .tre{
     padding-bottom: 5px;
+}
+
+
+@keyframes salita {
+    from{
+        transform: translateY(100px);
+        opacity: 0%;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 100%;
+    }
 }
