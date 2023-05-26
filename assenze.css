@@ -13,7 +13,7 @@ body{
 .div1{
     display: grid;
 
-    /* spazio su, testo, inputs, bottoneinvia, fr, spazio sotto*/
+    /* spazio su meno gap,titoli, inputs, bottoneinvia, fr, spazio sotto*/
     grid-template-rows: 0px 30px 50px 40px 1fr 10px;
 
     gap: 10px;
@@ -25,7 +25,7 @@ body{
     grid-template-columns: 1fr 20px 1fr;
     font-family: 'Galano';
     font-size: 25px;
-    color: rgb(10, 10, 30);
+    color: rgb(10, 10, 50);
 }
 .inputs{
     display: grid;
