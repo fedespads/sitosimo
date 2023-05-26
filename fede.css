@@ -1,11 +1,17 @@
+@font-face {
+    font-family: 'Galano';
+    src: url(GalanoGrotesqueBold.otf);
+}
+
 body{
     display: grid;
     background-color: rgb(247,247,250);
-    align-items: top;
     justify-items: center;
     margin: 0px;
     
-    grid-template-rows: 1fr 60px;
+    grid-template-rows: 3fr 70px 4fr 60px;
+    background-image: url(sfondofede.PNG);
+    background-size: 100%;
 }
 
 
@@ -33,4 +39,88 @@ img{
 }
 .tre{
     padding-bottom: 5px;
+}
+
+.scritta{
+    font-family: 'Galano';
+    display: grid;
+    grid-template-rows: 70px 70px ;
+    justify-content: center;
+    padding-left: 15px;
+    width: 300px;
+    color: rgb(255, 255, 255);
+}
+
+.numeri{
+    display: grid;
+    grid-template-columns: 90px 90px 90px 90px ;
+    align-items:self-end;
+    font-size: 50px;
+    
+}
+
+.lettere{
+    
+    display: grid;
+    grid-template-columns: 90px 90px 90px 90px ;
+
+    
+}
+
+#days{
+    
+    animation: deblur 1.5s ease-out 1s;
+    animation-fill-mode: backwards;
+}
+
+#hours{
+    
+    animation: deblur 1.5s ease-out 1.15s ;
+    animation-fill-mode: backwards;
+}
+#minutes{
+    
+    animation: deblur 1.5s ease-out 1.3s ;
+    animation-fill-mode: backwards;
+}
+#seconds{
+    
+    animation: deblur 1.5s ease-out 1.45s ;
+    animation-fill-mode: backwards;
+}
+
+.giorni{
+    animation: deblur 1.5s ease-out 1.60s ;
+    animation-fill-mode: backwards;
+}
+
+.ore{
+    
+    animation: deblur 1.5s ease-out 1.75s ;
+    animation-fill-mode: backwards;
+}
+
+.minuti{
+    animation: deblur 1.5s ease-out 1.90s ;
+    animation-fill-mode: backwards;
+
+}
+
+.secondi{
+    
+    animation: deblur 1.5s ease-out 2.05s ;
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes deblur {
+    from{
+        opacity: 0%;
+        filter:blur(8px);
+    }
+    to{
+        opacity: 100%;
+        
+        filter:blur(0px);
+    }
 }

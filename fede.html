@@ -4,7 +4,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   </head>
   <body>
-      <div></div>
+      <div class="vuoto"></div>
+      <div class="scritta">
+        <div class="numeri">
+          <div id="days"></div>
+          
+          <div id="hours"></div>
+          
+          <div id="minutes"></div>
+          
+          <div id="seconds"></div>
+
+        </div>
+        <div class="lettere">
+          <h class="giorni">Giorni</h>
+          <h class="ore">Ore</h>
+          <h class="minuti">Minuti</h>
+          <h class="secondi">Secondi</h>
+        </div>
+      </div>
+      <div class="vuoto"></div>
       <div class="navbar">
         <div class="contimg uno" onclick="window.open('home.html','_self');" style="cursor: pointer;">
           <img class="imghomevuota" src="icone/homeempty.png">
@@ -15,10 +34,35 @@
         <div class="contimg tre" onclick="window.open('assenze.html','_self');" style="cursor: pointer;">
           <img class="imgscuolavuota" src="icone/schoolempty.png">
         </div>
-        <div class="contimg quattro" style="cursor: pointer;">
+        <div class="contimg quattro" style="cursor: pointer;" onclick="
+        location.reload()">
           <img class="imgcuorevuoto" src="icone/heart.png">
         </div>
       </div>
     
+
+<script>
+  //Giorno destinazione
+  var countDownDate = new Date("Jun 07, 2023 08:00:00").getTime();
+  var x = setInterval(function(){
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+
+    
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+
+  },1000);
+
+</script>
+
   </body>
 </html>
