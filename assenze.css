@@ -14,7 +14,7 @@ body{
     display: grid;
 
     /* spazio su meno gap,titoli, inputs, bottoneinvia, fr, spazio sotto*/
-    grid-template-rows: 0px 30px 50px 40px 1fr 10px;
+    grid-template-rows: 0px 30px 50px 40px 1fr 60px;
 
     gap: 10px;
     
@@ -70,3 +70,28 @@ input:active{
 
 }
 
+
+
+img{
+    height: 25px;
+}
+.navbar{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    width: 400px;
+    background-color: white;
+}
+.imgscuola{
+    height: 32px;
+}
+.contimg{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 15px;
+}
+.tre{
+    padding-bottom: 5px;
+}
