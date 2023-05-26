@@ -4,13 +4,10 @@ body{
     align-items: top;
     justify-items: center;
     margin: 0px;
+    
+    grid-template-rows: 1fr 60px;
 }
 
-.div1{
-    display: grid;
-    grid-template-rows: 1fr 60px;
-    justify-items: center;
-}
 
 img{
     height: 25px;

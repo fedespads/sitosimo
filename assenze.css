@@ -6,19 +6,14 @@
 body{
     display: grid;
     background-color: rgb(247,247,250);
-    align-items: top;
     justify-items: center;
     margin: 0px;
-}
-.div1{
-    display: grid;
+    
 
     /* spazio su meno gap,titoli, inputs, bottoneinvia, fr, spazio sotto*/
     grid-template-rows: 0px 30px 50px 40px 1fr 60px;
 
     gap: 10px;
-    
-    justify-items: center;
 }
 .titoli{
     display: grid;
