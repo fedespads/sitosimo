@@ -4,28 +4,27 @@
 }
 body{
     background-color: rgb(247,247,250);
+    display: grid;
+    grid-template-rows: 1fr 300px 1fr;
     
     margin: 0;
     
 }
-.bloccobottoni{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-}
 .divbottoni{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    justify-items: center ;
     gap: 27px;
     align-items: center;
 }
 .pulsante{
-    display: flex ;
+
+
+    display: grid ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     background-color: white;
     border: none;
-    width: 330px;
+    width: 300px;
     height: 55px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -36,16 +35,12 @@ body{
     color: rgb(10, 10, 30);
     align-items: center;
 }
-.fr{
-    display: flex;
-    flex:1;
-}
 .butbut{
     
     background-color: rgb(255, 255, 255);
     border-color: white;
     border: none;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
     font-family: 'Galano', Helvetica,Arial,sans-serif;
     color: rgb(10, 10, 30);
@@ -80,14 +75,23 @@ img{
     height: 60px;
     box-shadow: 0 10px 60px  rgba(0, 68, 255, 0.219);
 }
+.divtitolo{
+    display: grid;
+
+    /*vuoto sopa il titolo, titolo, spazio tra titolo e pulsanti*/
+    grid-template-rows: 1fr 30px 50px;
+    justify-items: center;
+}
 .titolo{
-    position: relative;
-    top:-400px;
-    left: 60px;
     font-family: 'Galano', Helvetica,Arial,sans-serif;
-    font-size: 40px;
+    font-size: 35px;
     color: rgb(10, 10, 30);
 
+}
+.divfreccia{
+    display: grid;
+    justify-items: end;
+    padding-right: 15px;
 }
 .uno{
     animation: salita 1.5s ease-out ;
@@ -110,8 +114,12 @@ img{
         opacity: 100%;
     }
 }
-.homeimg{position: absolute;
-    bottom:20px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+.spaziohome{
+    display: grid;
+    grid-template-rows: minmax(20px, 1fr) 50px;
+    justify-items: center;
+    align-items: center;
+    padding-bottom: 20px;
 }
+
