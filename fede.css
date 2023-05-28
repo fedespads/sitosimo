@@ -19,14 +19,24 @@ img{
     height: 25px;
 }
 .navbar{
+    position: fixed;
+    bottom: 0%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 400px 1fr;
+    background-color: white;
+    width: 100vw;
+}
+.navbarinside{
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
-    width: 400px;
-    background-color: white;
     padding-bottom: 20px;
     height: 60px;
+}
+.imgcuore{
+    filter: drop-shadow(0 0 10px rgba(200, 255, 0, 0.342));
 }
 .imgscuolavuota{
     height: 32px;
@@ -49,6 +59,7 @@ img{
     padding-left: 15px;
     width: 300px;
     color: rgb(255, 255, 255);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.664));
 }
 
 .numeri{
@@ -90,7 +101,7 @@ img{
 }
 
 .giorni{
-    animation: deblur 1.5s ease-out 1.60s ;
+    animation: deblur 1.5s ease-out 1.6s ;
     animation-fill-mode: backwards;
 }
 
@@ -101,7 +112,7 @@ img{
 }
 
 .minuti{
-    animation: deblur 1.5s ease-out 1.90s ;
+    animation: deblur 1.5s ease-out 1.9s ;
     animation-fill-mode: backwards;
 
 }

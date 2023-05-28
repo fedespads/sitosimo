@@ -6,10 +6,11 @@
   </head>
   <body>
       <div class="vuoto"></div>
-      <div class="titoli">
-        <h>Presenze</h>
-        <div>        </div>
-         <h>Assenze</h>
+      <div class="titoli" >
+        <h style="cursor: pointer;">Presenze</h>
+        <div>
+        </div>
+         <h style="cursor: pointer;">Assenze</h>
       </div>
       <div class="inputs">
         <input id="inputPres" >
@@ -20,7 +21,7 @@
         <h>Invia</h>
       </div>
       <div class="vuoto"></div>
-      <div class="tabella tabella1">
+      <div class="tabella tabella1" style="cursor: pointer;">
         <div class="riga">
           <div class="percAss rigasx">
             %A
@@ -41,7 +42,7 @@
       </div>
       <div class="vuoto"></div>
       <div class="Obiettivi">
-        <div class="tabella tabella2">
+        <div class="tabella tabella2" style="cursor: pointer;">
             <div class="riga23">
                 <h>23</h>
             </div>
@@ -83,7 +84,7 @@
             </div>
           </div>
         <div></div>
-        <div class="tabella tabella3">
+        <div class="tabella tabella3" style="cursor: pointer;">
           <div class="riga24">
               <h>24</h>
           </div>
@@ -128,19 +129,24 @@
       <div class="vuoto"></div>
 
       <div class="navbar">
-        <div class="contimg uno" onclick="window.open('home.html','_self');" style="cursor: pointer;">
-          <img class="imghomevuota" src="icone/homeempty.png">
+        <div></div>
+        <div class="navbarinside">
+          <div class="contimg uno" onclick="window.open('home.html','_self');" style="cursor: pointer;">
+            <img class="imghomevuota" src="icone/homeempty.png">
+          </div>
+          <div class="contimg due" onclick="window.open('calendario.html','_self');" style="cursor: pointer;">
+            <img class="imgcalendvuoto" src="icone/calendarempty.png">
+          </div>
+          <div class="contimg tre" style="cursor: pointer;" onclick="
+          location.reload()">
+             <img class="imgscuola" src="icone/school.png">
+          </div>
+          <div class="contimg quattro" onclick="window.open('fede.html','_self');" style="cursor: pointer;">
+            <img class="imgcuorevuoto" src="icone/heartempty.png">
+          </div>
+
         </div>
-        <div class="contimg due" onclick="window.open('calendario.html','_self');" style="cursor: pointer;">
-          <img class="imgcalendvuoto" src="icone/calendarempty.png">
-        </div>
-        <div class="contimg tre" style="cursor: pointer;" onclick="
-        location.reload()">
-           <img class="imgscuola" src="icone/school.png">
-        </div>
-        <div class="contimg quattro" onclick="window.open('fede.html','_self');" style="cursor: pointer;">
-          <img class="imgcuorevuoto" src="icone/heartempty.png">
-        </div>
+        <div></div>
       </div>
       
       

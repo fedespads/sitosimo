@@ -175,14 +175,20 @@ img{
     height: 25px;
 }
 .navbar{
+    position: fixed;
+    bottom: 0%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 400px 1fr;
+    background-color: white;
+    width: 100vw;
+}
+.navbarinside{
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
-    background-color: white;
-    width: 400px;
     padding-bottom: 20px;
-    
     height: 60px;
 }
 .imgscuola{
