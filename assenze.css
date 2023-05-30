@@ -10,8 +10,8 @@ body{
     margin: 0px;
     
 
-    /* spazio su meno gap,titoli, inputs, bottoneinvia, fr, tabella1, fr, navbar*/
-    grid-template-rows: 0px 30px 50px 40px 1fr 60px 1fr 270px 2fr 60px;
+    /* spazio su meno gap,titoli, inputs, bottoneinvia, fr, tabella1, fr, obiettivi, vuoto, navbar*/
+    grid-template-rows: 0px 30px 50px 40px 1fr 60px 1fr 270px 2fr 80px 1fr 60px;
 
     gap: 10px;
 }
@@ -171,9 +171,19 @@ input:active{
     border-top-right-radius: 15px;
 }
 
-img{
-    height: 25px;
+.aszmaterie{
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 50px 30px;
+    cursor: pointer;
 }
+
+.aszmaterie p{
+    font-family: 'Galano';
+    color: rgb(41, 41, 41);
+    transform: translateY(-10px);
+}
+
 .navbar{
     position: fixed;
     bottom: 0%;
@@ -183,6 +193,12 @@ img{
     background-color: white;
     width: 100vw;
 }
+
+.navbarinside div img{
+    height: 25px;
+
+}
+
 .navbarinside{
     display: grid;
     grid-auto-flow: column;
