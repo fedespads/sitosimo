@@ -182,6 +182,10 @@ input:active{
     font-family: 'Galano';
     color: rgb(41, 41, 41);
     transform: translateY(-10px);
+
+    
+    animation: salita 1.5s ease-out 0.9s ;
+    animation-fill-mode: backwards;
 }
 
 .navbar{
