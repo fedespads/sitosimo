@@ -176,16 +176,16 @@ input:active{
     justify-items: center;
     grid-template-rows: 50px 30px;
     cursor: pointer;
+    
+    
+    animation: salita 1.5s ease-out 0.9s ;
+    animation-fill-mode: backwards;
 }
 
 .aszmaterie p{
     font-family: 'Galano';
     color: rgb(41, 41, 41);
     transform: translateY(-10px);
-
-    
-    animation: salita 1.5s ease-out 0.9s ;
-    animation-fill-mode: backwards;
 }
 
 .navbar{
@@ -198,7 +198,7 @@ input:active{
     width: 100vw;
 }
 
-.navbarinside div img{
+.navbarinsidedivimg{
     height: 25px;
 
 }
