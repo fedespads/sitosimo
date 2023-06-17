@@ -3,16 +3,25 @@
     src: url(GalanoGrotesqueBold.otf);
 }
 
+:root{
+    --barrawidth: 30px;
+}
+
+
 body{
-    display: grid;
+    display: flex;
     background-color: rgb(247,247,250);
-    justify-items: center;
+    justify-content: center;
+    align-items: center;
     margin: 0px;
     
-    grid-template-rows: 3fr 70px 4fr 60px;
+    grid-template-rows: 3fr 70px 1fr 30px 1fr 60px;
     background-image: url(sfondofede.PNG);
     background-size: 100%;
+
+    user-select: none;
 }
+
 
 
 img{
@@ -123,7 +132,47 @@ img{
     animation-fill-mode: backwards;
 }
 
+.barra{
+    display: flex;
+    align-items: start;
+    position: absolute;
+    top: 60%;
+    width: 300px;
+    overflow: hidden;
+  background-color: #ffffff05;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  height: 20px;
+  border-radius: 50px;
+  box-shadow:  6px 6px 12px #16161648,
+             -6px -6px 12px #ffffff25;
+}
 
+.piena{
+    height: 20px;
+    width: var(--barrawidth);
+    background-color: rgba(81, 110, 187, 0.61);
+}
+
+
+#percentuale{
+
+    display: flex;
+    font-family: 'Galano';
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    color: rgb(229, 255, 0);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.212));
+
+
+    position: absolute;
+    top: 55%;
+    animation: deblur 1.5s ease-out 2.2s ;
+    animation-fill-mode: backwards;
+}
+
+/*
 @keyframes deblur {
     from{
         opacity: 0%;

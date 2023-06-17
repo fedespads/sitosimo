@@ -161,15 +161,22 @@
         
     <script>
 
-
-      let Assenze= localStorage.key(0);
-      let Presenze= localStorage.key(1);
+      const Assenze= localStorage.key(0);
+      const Presenze= localStorage.key(1);
       let Ass= localStorage.getItem(Assenze);
       let Pres= localStorage.getItem(Presenze);
       let AssVal= +Ass;
       let PresVal= +Pres;
       let PercAss= (AssVal/(PresVal+AssVal))*100;
       let AssManc = Math.round((257-AssVal)/0.6)/10;
+      console.log(Assenze);
+      console.log(Presenze);
+      console.log(Ass);
+      console.log(Pres);
+      console.log(AssVal);
+      console.log(PresVal);
+      console.log(PercAss);
+      console.log(AssManc);
 
 
       console.log(localStorage);

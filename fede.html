@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   </head>
   <body>
-      <div class="vuoto"></div>
       <div class="scritta">
         <div class="numeri">
           <div id="days"></div>
@@ -23,7 +22,10 @@
           <h class="secondi">Secondi</h>
         </div>
       </div>
-      <div class="vuoto"></div>
+      <div id="percentuale" >-</div>
+      <div class="barra">
+        <div class="piena"></div>
+      </div>
       <div class="navbar">
         <div></div>
         
@@ -53,11 +55,20 @@
 
 <script>
   //Giorno destinazione
-  var countDownDate = new Date("Jun 07, 2023 17:15:00").getTime();
+  var datafinale = new Date("Jul 16, 2023 12:35:00").getTime();
+  var datainiziale = new Date("Jun 17, 2023 11:00:00").getTime();
+
+  var root = document.querySelector(':root');
+  var rootStyles = getComputedStyle(root);
+  var y2= rootStyles.getPropertyValue('--barrawidth');
+
   var x = setInterval(function(){
     var now = new Date().getTime();
-    var distance = countDownDate - now;
+    
+    var distance = datafinale - now;
+    perc = (Math.floor(((now-datainiziale)/(datafinale-datainiziale)*100)*100))/100;
 
+    root.style.setProperty('--barrawidth', perc*3+'px');
     
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -68,6 +79,7 @@
     document.getElementById("hours").innerHTML = hours;
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
+    document.getElementById("percentuale").innerHTML = perc+'%';
 
 
   },1000);
