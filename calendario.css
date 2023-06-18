@@ -186,6 +186,10 @@ img{
 
 
 .data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     width: 150px;
     padding: 5px 15px;
     border: none;
@@ -194,6 +198,13 @@ img{
     border-radius: 18px;
     box-shadow:  5px 5px 7px #e8e8f0,
                  -5px -5px 7px #ffffff;
+
+}
+
+.data input{
+    background: none;
+    border: none;
+    width: 150px;
 
 }
 
