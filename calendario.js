@@ -7,6 +7,8 @@ function AggImpegno(){
   contimpegni.appendChild(newDiv);
 }
 
+
+
 document.getElementById("piu").addEventListener("click", function ApriAggiungiImpegno(){
   document.getElementById("muroblur").classList.add("active");
   document.getElementById("contaggiunta").classList.add("active");
@@ -15,6 +17,15 @@ document.getElementById("finepiu").addEventListener("click", function FineAggiun
   document.getElementById("muroblur").classList.remove("active");
   document.getElementById("contaggiunta").classList.remove("active");
   document.getElementById("i").classList.remove("active");
+
+
+
+  
+  let meseimp = document.getElementById("dataimp").value.split('-')[1];
+  let giornoimp = document.getElementById("dataimp").value.split('-')[2];
+  
+  console.log(`cosa: ${cosa}, materia: ${materia}, data: ${giornoimp}/${meseimp}`);
+  
 });
 document.getElementById("i").addEventListener("click",
 function Interrog(){
@@ -31,7 +42,6 @@ document.getElementById("casellamateria").addEventListener("click",function Case
   document.getElementById("materie").classList.toggle("active");
   document.getElementById("imgfreccia").classList.toggle("active");
 });
-
 
 document.getElementById("materia1").addEventListener("click",function(){
   document.getElementById("testomateria").innerHTML=document.getElementById("materia1").innerHTML;
@@ -118,5 +128,6 @@ document.getElementById("materia14").addEventListener("click",function(){
   document.getElementById("materie").classList.remove("active");
   document.getElementById("imgfreccia").classList.remove("active");
 });
+
 
 
