@@ -15,7 +15,6 @@ body{
     align-items: center;
     margin: 0px;
     gap: 20px;
-    overflow: hidden;
 }
 .titolo{
     display: flex;
