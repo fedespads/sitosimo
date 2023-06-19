@@ -5,7 +5,6 @@
   </head>
   <body>
       <div class="titolo">Calendario</div>
-      <span style="height: 10px;"></span>
       <div class="contenitore-impegni" id="contimpegni">
         <div class="contenitore-impegno-singolo">
           <div class="impegno">
@@ -47,6 +46,7 @@
             </svg>
         </div>
       </div>
+      <div class="vuoto"></div>
       <div class="navbar">
         <div></div>
         <div class="navbarinside">
@@ -71,15 +71,39 @@
 
       <div class="muroblur" id="muroblur"></div>
       <div class="contaggiunta" id="contaggiunta">
-        <div>Cosa</div>
-        <div></div>
-        <div>Materia</div>
-        <div></div>
-        <div>Quando</div>
+        <span></span>
+        <div class="tit">Cosa</div>
+        <div class="ContCose">
+          <div class="ContCosa I" id="i">I</div>
+          
+          <div class="ContCosa V" id="v">V</div>
+        </div>
+        <div class="tit">Materia</div>
+        <div class="contMateria" id="casellamateria">
+            <div class="testomateria" id="testomateria">-</div>
+            <img src="frecciagiu.png" id="imgfreccia" class="imgfreccia">
+        </div>
+        <div class="materie" id="materie">
+          <div class="materia" id="materia1">Chimica</div>
+          <div class="materia" id="materia2">Prog. Arch.</div>
+          <div class="materia" id="materia3">Ed. Civica</div>
+          <div class="materia" id="materia4">Filosofia</div>
+          <div class="materia" id="materia5">Fisica</div>
+          <div class="materia" id="materia6">Lab. Arch.</div>
+          <div class="materia" id="materia7">Inglese</div>
+          <div class="materia" id="materia8">Italiano</div>
+          <div class="materia" id="materia9">Matematica</div>
+          <div class="materia" id="materia10">Potenz.</div>
+          <div class="materia" id="materia11">Religione</div>
+          <div class="materia" id="materia12">Motoria</div>
+          <div class="materia" id="materia13">Storia</div>
+          <div class="materia" id="materia14">Arte</div>
+        </div>
+        <div class="tit">Quando</div>
         <div class="data">
           <input type="date">
         </div>
-        
+        <span></span>
         <div class="fine" id="finepiu">Fine</div>
       </div>
 
