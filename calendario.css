@@ -7,6 +7,8 @@
 :root{
     --colore: #000;
 }
+
+
 body{
     display: grid;
     background-color: rgb(247,247,250);
@@ -15,38 +17,35 @@ body{
     align-items: center;
     margin: 0px;
     gap: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
 }
 .titolo{
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Galano';
-    position: sticky;
-    padding: 20px;
-    background-color: rgba(33, 72, 145, 0.856);
+    padding: 30px 20px 20px 20px;
     color: rgb(231, 231, 231);
     height: 20px;
-    width: 100%;
+    width: max-content;
     font-size: 30px;
+    color: rgb(0,0,50);
 }
 .contenitore-impegni{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    height:auto ;
 }
 .contenitore-impegno-singolo{
     display: flex;
-    justify-content: center;
-}
-.impegno{
+    justify-content: space-between;
+    scale: 0;
+    height: 0;
     background-color: rgb(247,247,250);
-    display: flex;
     align-items: center;
-    justify-content: center;
     font-family: 'Galano';
     width: 80vw;
-    height: 80px;
     cursor: pointer;
     border-radius: 18px;
     box-shadow:  5px 5px 7px #e8e8f0,
@@ -55,16 +54,41 @@ body{
     color: rgb(47, 47, 139);
     font-size: 25px;
 }
-.impegno:hover{
+.contenitore-impegno-singolo.active{
+
+    scale:1;
+    height: 80px;
+    margin-bottom: 20px;
+
+}
+.contenitore-impegno-singolo:hover{
     scale: 1.05;
+}
+.start{
+    background-color: rgb(29, 151, 29);
+    
+    width: 60px;
+    height: 40px;
+    border-radius: 18px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.end{
+    margin-right: 20px;
+    
+    color: rgba(47, 47, 139, 0.664);
 }
 .pulsanti{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.pulsante{
-    background-color: rgb(247,247,250);
+.piu{
+    background-color: rgb(58, 108, 216);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -73,8 +97,7 @@ body{
     align-items: center;
     cursor: pointer;
     
-    box-shadow:  5px 5px 7px #e8e8f0,
-                 -5px -5px 7px #ffffff;
+    box-shadow:  0 0 25px rgb(0, 132, 255);
 }
 .pulsante:active{
     
@@ -118,7 +141,8 @@ img{
 }
 .muroblur{
     position: absolute;
-    height: 100%;
+    top: 0%;
+    height: 120%;
     width: 100%;
     z-index: 2;
     backdrop-filter: blur(3px);
@@ -126,6 +150,7 @@ img{
     scale: 0;
     opacity: 0;
     transition: opacity 0.3s;
+    overflow: hidden;
 }
 .muroblur.active{
     scale: 1;

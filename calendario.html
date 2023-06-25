@@ -6,47 +6,124 @@
   <body>
       <div class="titolo">Calendario</div>
       <div class="contenitore-impegni" id="contimpegni">
-        <div class="contenitore-impegno-singolo">
-          <div class="impegno">
-            1
+        <div class="contenitore-impegno-singolo" id="divimp1">
+          <div id="i11" class="start">
+            a
+          </div>
+          <div id="i12" class="center">
+            b
+          </div>
+          <div id="i13" class="end">
+            c
           </div> 
         </div>
-        <div class="contenitore-impegno-singolo">
-          <div class="impegno">
-            2
+        <div class="contenitore-impegno-singolo" id="divimp2">
+          <div id="i21" class="start">
+            a
+          </div>
+          <div id="i22" class="center">
+            b
+          </div>
+          <div id="i23" class="end">
+            c
+          </div>   
+        </div>
+        <div class="contenitore-impegno-singolo" id="divimp3">
+          <div id="i31" class="start">
+            a
+          </div>
+          <div id="i32" class="center">
+            b
+          </div>
+          <div id="i33" class="end">
+            c
           </div>  
-        </div><div class="contenitore-impegno-singolo">
-          <div class="impegno">
-            3
+        </div>
+        <div class="contenitore-impegno-singolo" id="divimp4">
+          <div id="i41" class="start">
+            a
+          </div>
+          <div id="i42" class="center">
+            b
+          </div>
+          <div id="i43" class="end">
+            c
+          </div>   
+        </div>
+        <div class="contenitore-impegno-singolo" id="divimp5">
+          <div id="i51" class="start">
+            a
+          </div>
+          <div id="i52" class="center">
+            b
+          </div>
+          <div id="i53" class="end">
+            c
+          </div>   
+        </div>
+        <div class="contenitore-impegno-singolo" id="divimp6">
+          <div id="i61" class="start">
+            a
+          </div>
+          <div id="i62" class="center">
+            b
+          </div>
+          <div id="i63" class="end">
+            c
           </div>  
-        </div>  
+        </div>
+        <div class="contenitore-impegno-singolo" id="divimp7">
+          <div id="i71" class="start">
+            a
+          </div>
+          <div id="i72" class="center">
+            b
+          </div>
+          <div id="i73" class="end">
+            c
+          </div> 
+        </div>
+        <div class="contenitore-impegno-singolo" id="divimp8">
+          <div id="i81" class="start">
+            a
+          </div>
+          <div id="i82" class="center">
+            b
+          </div>
+          <div id="i83" class="end">
+            c
+          </div>  
+        </div>
+        <div class="contenitore-impegno-singolo" id="divimp9">
+          <div id="i91" class="start">
+            a
+          </div>
+          <div id="i92" class="center">
+            b
+          </div>
+          <div id="i93" class="end">
+            c
+          </div> 
+        </div>
+        <div class="contenitore-impegno-singolo" id="divimp10">
+          <div id="i101" class="start">
+            a
+          </div>
+          <div id="i102" class="center">
+            b
+          </div>
+          <div id="i103" class="end">
+            c
+          </div> 
+        </div>         
       </div>
       <div class="pulsanti">
-        <div class="pulsante meno">
-          <svg width="30px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-
-          <title/>
-          
-          <g id="Complete">
-          
-          <g id="minus">
-          
-          <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="4" x2="20" y1="12" y2="12"/>
-          
-          </g>
-          
-          </g>
-          
-          </svg>
-        </div>
-        <span style="width: 50px;"></span>
-        <div class="pulsante piu" id="piu">
+        <div class="piu" id="piu">
           <svg width="30px" height="200px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C12.5523 4 13 4.44772 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44772 11.4477 4 12 4Z" fill="#000000"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C12.5523 4 13 4.44772 13 5V11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H13V19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19V13H5C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11H11V5C11 4.44772 11.4477 4 12 4Z" fill="#ffffff"/>
             </svg>
         </div>
       </div>
-      <div class="vuoto"></div>
       <div class="navbar">
         <div></div>
         <div class="navbarinside">
@@ -84,20 +161,20 @@
             <img src="frecciagiu.png" id="imgfreccia" class="imgfreccia">
         </div>
         <div class="materie" id="materie">
-          <div class="materia" id="materia1">Chimica</div>
-          <div class="materia" id="materia2">Prog. Arch.</div>
-          <div class="materia" id="materia3">Ed. Civica</div>
-          <div class="materia" id="materia4">Filosofia</div>
-          <div class="materia" id="materia5">Fisica</div>
-          <div class="materia" id="materia6">Lab. Arch.</div>
-          <div class="materia" id="materia7">Inglese</div>
-          <div class="materia" id="materia8">Italiano</div>
-          <div class="materia" id="materia9">Matematica</div>
-          <div class="materia" id="materia10">Potenz.</div>
-          <div class="materia" id="materia11">Religione</div>
-          <div class="materia" id="materia12">Motoria</div>
-          <div class="materia" id="materia13">Storia</div>
-          <div class="materia" id="materia14">Arte</div>
+          <div class="materia">Chimica</div>
+          <div class="materia">Prog. Arch.</div>
+          <div class="materia">Ed. Civica</div>
+          <div class="materia">Filosofia</div>
+          <div class="materia">Fisica</div>
+          <div class="materia">Lab. Arch.</div>
+          <div class="materia">Inglese</div>
+          <div class="materia">Italiano</div>
+          <div class="materia">Matematica</div>
+          <div class="materia">Potenz.</div>
+          <div class="materia">Religione</div>
+          <div class="materia">Motoria</div>
+          <div class="materia">Storia</div>
+          <div class="materia">Arte</div>
         </div>
         <div class="tit">Quando</div>
         <div class="data">
