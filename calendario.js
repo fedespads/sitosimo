@@ -2,6 +2,10 @@ let contimpegni = document.getElementById("contimpegni");
 let cosa;
 let aperta=0;
 let materia;
+let statoelimina=0;
+let diveliminato =0;
+
+
 
 
 let impegni={
@@ -79,7 +83,7 @@ function attivaDiv(){
       num1++;
     }
   })
-  num1= 10-num1; 
+  num1= 10-num1;
    
   let i=1;
   while(i<=num1){
@@ -87,13 +91,13 @@ function attivaDiv(){
     i++;
 }
   i++;
+  
   while(i<=10){
     document.getElementById(`divimp${i}`).classList.remove("active");
     i++;
   }
 }
 attivaDiv();
-
 function aggData(i){
   let a= Object.values(impegni)[i-1][2].toString()[Object.values(impegni)[i-1][2].toString().length -2];
   let b= Object.values(impegni)[i-1][2].toString()[Object.values(impegni)[i-1][2].toString().length -1];
@@ -135,6 +139,36 @@ function aggSfondo(){
   }
 }
 aggSfondo();
+function EliminaDiv(DE){
+  let i=DE;
+  localStorage.setItem(`imp${i}`,"");
+  while(i<=9){
+    localStorage.setItem(`imp${i}`, localStorage.getItem(`imp${i+1}`))
+    i++;
+  }
+  localStorage.setItem("imp10","");
+  copiaLS();
+  settaIH();
+  aggSfondo();
+  let a=1;
+  let b=0;
+  while(a<=10){
+    if(localStorage.getItem(`imp${a}`)[0] == 'I'){
+    b++;
+    }
+    if(localStorage.getItem(`imp${a}`)[0] == 'V'){
+      b++;
+    }
+    a++;
+  }
+  document.getElementById(`divimp${b+1}`).classList.remove("active");
+
+  document.querySelectorAll(".del").forEach(el=>{
+    el.classList.remove("del");
+  })
+
+  diveliminato=0;
+}
 
 
 
@@ -274,8 +308,6 @@ document.getElementById("casellamateria").addEventListener("click",function Case
 
 
 
-
-
 //IMPORTANTE
 document.querySelectorAll('.materia').forEach(el => {
   el.addEventListener('click', function (){
@@ -290,10 +322,45 @@ document.querySelectorAll('.materia').forEach(el => {
 });
 
 
+document.querySelectorAll('.contenitore-impegno-singolo').forEach(el=>{
+  el.addEventListener("click", function(){
+  el.classList.add('del');
+
+  document.querySelectorAll('.contenitore-impegno-singolo').forEach(e=>{
+    if (e !== el){
+      e.classList.remove('del');
+    }
+  })
+  })
+})
+
+document.querySelector(".titolo").addEventListener("click", function(){
+    document.querySelectorAll('.contenitore-impegno-singolo').forEach(cont=>{
+      cont.classList.remove('del');
+    })
+  
+})
+
 function contaimpegni(){
   let numimpegni =0;
   document.querySelectorAll('.impegno').forEach(imp => {
     numimpegni++;
   });
 };
+
+setInterval(function(){
+  if(document.querySelector('.del')){
+    document.querySelector('.del').addEventListener("click", function(){
+      diveliminato = +document.querySelector('.del').id[document.querySelector('.del').id.length -1];
+
+      EliminaDiv(diveliminato);
+    })
+  }
+  else{
+  }
+  aggSfondo();
+},500);
+
+
+
 

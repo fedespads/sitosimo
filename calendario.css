@@ -32,6 +32,8 @@ body{
     width: max-content;
     font-size: 30px;
     color: rgb(0,0,50);
+    cursor: pointer;
+    user-select: none;
 }
 .contenitore-impegni{
     display: flex;
@@ -53,12 +55,30 @@ body{
     transition: all 0.15s;
     color: rgb(47, 47, 139);
     font-size: 25px;
+    overflow:hidden ;
+    transition: all 0.3s;
 }
-.contenitore-impegno-singolo.active{
+.contenitore-impegno-singolo.active, .contenitore-impegno-singolo.del{
 
     scale:1;
     height: 80px;
     margin-bottom: 20px;
+
+}
+.contenitore-impegno-singolo.active.del::after{
+    content: "Elimina";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(192, 41, 41);
+    height: 80px;
+    width: 80vw;
+    border-radius: 18px;
+    animation: scorri 0.5s ease-out;
 
 }
 .contenitore-impegno-singolo:hover{
@@ -344,6 +364,16 @@ img{
     to{
         scale: 1.1;
         box-shadow: 0 0 20px yellow;
+    }
+    
+}
+@keyframes scorri {
+    from{
+        left: 80vw;
+    }
+
+    to{
+        left: 0;
     }
     
 }
